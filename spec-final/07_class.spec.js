@@ -1,9 +1,6 @@
-jest.autoMockOff();
-
 describe('Classes', () => {
 
   it('has a constructor for initialization', ()=>{
-
     // Create an Animal class
     // Add a constructor that takes one param, the name.
     // Set this.name to the name passed in
@@ -21,7 +18,6 @@ describe('Classes', () => {
   });
 
   it('constructor can have default param values', ()=>{
-
     // Create an Animal class with a constructor
     // Make your class default (using default params) the name to "Honey Badger"
     class Animal{
@@ -38,7 +34,6 @@ describe('Classes', () => {
   });
 
   it('can have instance methods', ()=>{
-
     //Create an Animal class, pass in the name to the constructor, and add a sayName function to the class definition
     class Animal{
       constructor(name="Honey Badger"){
@@ -59,7 +54,6 @@ describe('Classes', () => {
 
 
   it('can have static methods', ()=>{
-
     // Create an Animal class, pass in the name to the constructor,
     // and add a create method that takes a name and returns an instance
     class Animal{
@@ -114,7 +108,6 @@ describe('Classes', () => {
   });
 
   it('can use property setters and getters', ()=>{
-
     // Create an Animal class (don't pass name into constructor)
     // Add property setter for name
     // Add property getter for name

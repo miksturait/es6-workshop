@@ -1,9 +1,6 @@
-jest.autoMockOff();
-
 describe('SETS', () => {
 
   it('has an add method and a has method', ()=>{
-
     // Create a new Set
     // add the following numbers to it, using set.add(num): 1, 2, 3
 
@@ -16,12 +13,9 @@ describe('SETS', () => {
     expect(mySet.has(2)).toBe(true);
     expect(mySet.has(3)).toBe(true);
     expect(mySet.has(4)).toBe(false);
-
   });
 
-
   it('doesn`t allow duplicates', ()=>{
-
     // Create a new Set
     // add the following numbers to it, using set.add(num): 1, 1, 1
 
@@ -34,7 +28,6 @@ describe('SETS', () => {
     expect(mySet.has(2)).toBe(false);
     expect(mySet.has(3)).toBe(false);
     expect(mySet.has(4)).toBe(false);
-
   });
 
 });

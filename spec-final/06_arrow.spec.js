@@ -1,9 +1,6 @@
-jest.autoMockOff();
-
 describe('Arrow Functions', () => {
 
   it('can replace traditional functions', () => {
-
     let fnMultiply, arrowMultiply;
 
     fnMultiply = function(a, b){
@@ -13,11 +10,9 @@ describe('Arrow Functions', () => {
     arrowMultiply = (a, b) => a * b;
 
     expect(fnMultiply(5, 5)).toBe(arrowMultiply(5, 5));
-
   });
 
   it('can replace traditional functions #2', () => {
-
     let nums = [2, 5, 10];
     let squares = nums.map((num) => num*num);
 
@@ -28,7 +23,6 @@ describe('Arrow Functions', () => {
   });
 
   it('binds `this` to the eval scope, not the runtime scope', () => {
-
     let person = {
       name: 'Aaron',
       greetFriends: function(friends){
@@ -41,11 +35,9 @@ describe('Arrow Functions', () => {
     let friendsArray = ['Naomi', 'Jojo', 'Ryan', 'Owen'];
 
     expect(()=> person.greetFriends(friendsArray)).not.toThrow();
-
   });
 
   it('can make array filter chains more managable', () => {
-
     let data = [
       {type: 'Widget', name: 'Sprocket',      price: 10.00, qty: 3},
       {type: 'Widget', name: 'Bracket',       price: 1.00, qty: 5},
@@ -64,9 +56,7 @@ describe('Arrow Functions', () => {
       .sort((d) => d.qty * -1)           //Sort by price, desc
       .map((d) => d.name);               //Pull just the name from each item
 
-    expect(shoppingList.shift()).toBe('Bacon');
-    expect(shoppingList.shift()).toBe('JT Best Hits');
-
+    expect(shoppingList).toEqual(['JT Best Hits', 'Bacon']);
   });
 
 });

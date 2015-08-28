@@ -1,5 +1,3 @@
-jest.autoMockOff();
-
 describe('WEAKMAPS', () => {
 
   it('has a set method', ()=>{

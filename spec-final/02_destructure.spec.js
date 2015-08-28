@@ -1,6 +1,3 @@
-
-jest.autoMockOff();
-
 function getAddress(){
   return {
     city: "Salt Lake City",
@@ -20,7 +17,6 @@ function getNumbers(){
 function getNestedNumbers(){
   return [1, 2, [3, 4, [5, 6]]];
 }
-
 
 describe('Destructuring', () => {
 
@@ -60,7 +56,6 @@ describe('Destructuring', () => {
       expect( ()=>console.log(city) ).toThrow();
       expect( ()=>console.log(state) ).toThrow();
       expect( ()=>console.log(zip) ).toThrow();
-
     });
 
     it('can destructure nested variables', () => {
@@ -71,7 +66,6 @@ describe('Destructuring', () => {
       expect(lat).toBe(40.776608);
       expect(long).toBe(-111.920485);
       expect(()=> console.log(coords)).toThrow();
-
     });
 
   });
@@ -85,7 +79,6 @@ describe('Destructuring', () => {
 
       expect(one).toBe(1);
       expect(two).toBe(2);
-
     });
 
     it('can skip indexes in arrays', () =>{
@@ -96,7 +89,6 @@ describe('Destructuring', () => {
       expect(one).toBe(1);
       expect(three).toBe(3);
       expect(()=>console.log(two)).toThrow();
-
     });
 
     it('can reach nested arrays', () =>{
@@ -107,7 +99,6 @@ describe('Destructuring', () => {
       expect(one).toBe(1);
       expect(three).toBe(3);
       expect(six).toBe(6);
-
     });
 
   });

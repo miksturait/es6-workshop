@@ -1,5 +1,3 @@
-jest.autoMockOff();
-
 describe('MAPS', () => {
 
   xit('has a set method', ()=>{
@@ -13,7 +11,6 @@ describe('MAPS', () => {
   });
 
   xit('can use objects as a key', ()=>{
-
     let user = {name: 'Aaron'};
     let value = {twitter: '@js_dev', gplus: '+AaronFrost'}
 
@@ -23,7 +20,6 @@ describe('MAPS', () => {
 
     expect(myMap.has(user)).toBe(true);
     expect(myMap.get(user)).toBe(value);
-
   });
 
 });

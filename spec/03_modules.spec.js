@@ -1,11 +1,8 @@
 //WRITE YOUR IMPORT STATEMENTS HERE
 import Mathy from '../common/Mathy';
 
-
-
-jest.autoMockOff();
-
 describe('ES6 Modules', () => {
+
   xit('can import Mathy', () => {
 
     //I DID THIS ONE FOR YOU!
@@ -43,6 +40,6 @@ describe('ES6 Modules', () => {
     //NOTE: All import statements have to be done at the top of the file
 
     expect(_).toBeDefined();
-
   });
+
 });

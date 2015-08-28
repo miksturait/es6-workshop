@@ -1,8 +1,6 @@
-jest.autoMockOff();
-
 describe('Default Values', () => {
-  it('can be triggered when the incoming argument is undefined', () => {
 
+  it('can be triggered when the incoming argument is undefined', () => {
     function test(name = "Mercury") {
       return name;
     }
@@ -19,7 +17,6 @@ describe('Default Values', () => {
   });
 
   it('aren\'t included in arguments', () => {
-
     function test(name = "Mercury") {
       return arguments.length;
     }
@@ -60,7 +57,6 @@ describe('Default Values', () => {
 describe('Rest Parameters', () => {
 
   it('catch non-specified params', () => {
-
     function resty(first, second, ...others){
       return others;
     }
@@ -79,7 +75,6 @@ describe('Rest Parameters', () => {
   });
 
   it('has a different length than `arguments`', () => {
-
     function resty(first, second, ...others){
       return others.length == arguments.length;
     }
@@ -92,7 +87,6 @@ describe('Rest Parameters', () => {
   });
 
   it('is an actual array, unlike arguments', () => {
-
     function resty(...args){
       return args;
     }
@@ -112,7 +106,6 @@ describe('Rest Parameters', () => {
     expect(rests.splice).toEqual(Array.prototype.splice);
   });
 
-
   describe('EXTRA CREDIT', ()=>{
 
     /*
@@ -121,7 +114,6 @@ describe('Rest Parameters', () => {
     */
 
     it('it can default all arguments, optionally', () => {
-
       //Modify the method signature of `myFunction` to allow for all args to be optional
 
       function myFunction({name="Aaron", age=35, favoriteBand="Queen"}={}){
@@ -135,7 +127,6 @@ describe('Rest Parameters', () => {
       myFunction({ name: 'Axel' });
       myFunction({});
       myFunction();
-
     });
   })
 

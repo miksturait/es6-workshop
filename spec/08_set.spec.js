@@ -1,5 +1,3 @@
-jest.autoMockOff();
-
 describe('SETS', () => {
 
   xit('has an add method and a has method', ()=>{
@@ -12,7 +10,6 @@ describe('SETS', () => {
     expect(mySet.has(2)).toBe(true);
     expect(mySet.has(3)).toBe(true);
     expect(mySet.has(4)).toBe(false);
-
   });
 
 
@@ -27,7 +24,6 @@ describe('SETS', () => {
     expect(mySet.has(2)).toBe(false);
     expect(mySet.has(3)).toBe(false);
     expect(mySet.has(4)).toBe(false);
-
   });
 
 });

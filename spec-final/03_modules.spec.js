@@ -4,10 +4,8 @@ import myMathy from '../common/Mathy';
 import _ from 'lodash';
 import {sqrt as mySqrt, square as mySquare} from '../common/Mathy';
 
-
-jest.autoMockOff();
-
 describe('ES6 Modules', () => {
+
   it('can import Mathy', () => {
 
     //I DID THIS ONE FOR YOU!
@@ -42,6 +40,6 @@ describe('ES6 Modules', () => {
     //import `lodash`
 
     expect(_).toBeDefined();
-
   });
+
 });

@@ -1,5 +1,3 @@
-jest.autoMockOff();
-
 describe('Arrow Functions', () => {
 
   xit('can replace traditional functions', () => {
@@ -12,7 +10,6 @@ describe('Arrow Functions', () => {
 
 
     expect(fnMultiply(5, 5)).toBe(arrowMultiply(5, 5));
-
   });
 
   xit('can replace traditional functions #2', () => {
@@ -28,7 +25,6 @@ describe('Arrow Functions', () => {
     expect(squares.shift()).toBe(4);
     expect(squares.shift()).toBe(25);
     expect(squares.shift()).toBe(100);
-
   });
 
   xit('binds `this` to the eval scope, not the runtime scope', () => {
@@ -47,7 +43,6 @@ describe('Arrow Functions', () => {
     let friendsArray = ['Naomi', 'Jojo', 'Ryan', 'Owen'];
 
     expect(()=> person.greetFriends(friendsArray)).not.toThrow();
-
   });
 
   xit('can make array filter chains more managable', () => {
@@ -80,9 +75,7 @@ describe('Arrow Functions', () => {
         return d.name;
       });//Pull just the name from each item
 
-    expect(shoppingList.shift()).toBe('Bacon');
-    expect(shoppingList.shift()).toBe('JT Best Hits');
-
+    expect(shoppingList).toEqual(['JT Best Hits', 'Bacon']);
   });
 
 });

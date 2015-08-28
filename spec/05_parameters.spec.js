@@ -1,5 +1,3 @@
-jest.autoMockOff();
-
 describe('Default Values', () => {
   xit('can be triggered when the incoming argument is undefined', () => {
 
@@ -11,7 +9,6 @@ describe('Default Values', () => {
     expect(test(undefined)) .toBe(/*ENTER YOUR GUESS HERE*/);
     expect(test(null))      .toBe(/*ENTER YOUR GUESS HERE*/);
     expect(test())          .toBe(/*ENTER YOUR GUESS HERE*/);
-
   });
 
   xit('aren\'t included in arguments', () => {
@@ -23,7 +20,6 @@ describe('Default Values', () => {
     expect(test("Aaron"))   .toBe(/*ENTER YOUR GUESS HERE*/);
     expect(test(null))      .toBe(/*ENTER YOUR GUESS HERE*/);
     expect(test())          .toBe(/*ENTER YOUR GUESS HERE*/);
-
   });
 
   xit('can trigger a function call', () => {
@@ -43,7 +39,6 @@ describe('Default Values', () => {
     expect(test())          .toBe(/*ENTER YOUR GUESS HERE*/);
     expect(test(null))      .toBe(/*ENTER YOUR GUESS HERE*/);
     expect(triggerCount)    .toBe(/*ENTER YOUR GUESS HERE*/);
-
   });
 
 });
@@ -61,7 +56,6 @@ describe('Rest Parameters', () => {
     expect(resty(1,2).length).toBe(/*ENTER YOUR GUESS HERE */);
     expect(resty(1,2,3).length).toBe(/*ENTER YOUR GUESS HERE */);
     expect(resty(1,2,3, undefined, 5, undefined, 7, undefined, 9, 10).length).toBe(/*ENTER YOUR GUESS HERE */);
-
   });
 
   xit('has a different length than `arguments`', () => {
@@ -97,7 +91,6 @@ describe('Rest Parameters', () => {
     expect(rests.__proto__)                   .toEqual(/*ENTER YOUR GUESS HERE*/);
     expect(rests.splice)                      .toBeDefined();
     expect(rests.splice)                      .toEqual(Array.prototype.splice);
-
   });
 
 
@@ -123,7 +116,6 @@ describe('Rest Parameters', () => {
       myFunction({ name: 'Axel' });
       myFunction({});
       myFunction();
-
     });
   })
 

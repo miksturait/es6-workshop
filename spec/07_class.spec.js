@@ -1,5 +1,3 @@
-jest.autoMockOff();
-
 describe('Classes', () => {
 
   xit('has a constructor for initialization', ()=>{

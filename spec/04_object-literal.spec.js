@@ -1,7 +1,5 @@
-jest.autoMockOff();
-
-
 describe('Object Literal', () => {
+
   xit('can use shorthand for property names', () => {
 
     function createMonster(name, power) {
@@ -25,6 +23,5 @@ describe('Object Literal', () => {
     expect(godzilla.power).toBe(1000);
     expect(godzilla.attack(mechaGodzilla)).toBe('Godzilla attacked MechaGodzilla');
   });
-
 
 });

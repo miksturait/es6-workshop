@@ -1,6 +1,3 @@
-jest.autoMockOff();
-
-
 describe('LET', () => {
 
   it('can be used in place of `var`', () => {
@@ -33,7 +30,7 @@ describe('LET', () => {
       let b = 1;
     }
 
-    expect(()=> console.log(b)).toThrow(new ReferenceError('b is not defined'));
+    expect(()=> console.log(b)).toThrowError(ReferenceError, "Can't find variable: b");
   });
 
 
@@ -47,7 +44,7 @@ describe('LET', () => {
       return i;
     }
 
-    expect(doLoop).toThrow(new ReferenceError('i is not defined'));
+    expect(doLoop).toThrowError(ReferenceError, "Can't find variable: i");
   });
 
 
@@ -59,7 +56,7 @@ describe('LET', () => {
       let d = 2;
     }
 
-    expect(()=> console.log('d',d)).toThrow(new ReferenceError('d is not defined'));
+    expect(()=> console.log('d',d)).toThrowError(ReferenceError, "Can't find variable: d");
   });
 
 });
